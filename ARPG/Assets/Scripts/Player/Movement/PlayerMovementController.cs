@@ -26,6 +26,8 @@ namespace UGG.Move
         [SerializeField,Header("移动速度")] private float runSpeed;
         [SerializeField,Header("移动速度")] private float crouchMoveSpeed;
         
+        [SerializeField,Header("动画移动速度倍率")] private float animMoveMult;
+        
         
         [SerializeField,Header("角色胶囊控制(下蹲)")] private Vector3 crouchCenter;
         [SerializeField] private Vector3 originCenter;
@@ -65,7 +67,8 @@ namespace UGG.Move
             base.Update();
             
             PlayerMoveDirection();
-            
+            UpdateRollAnimation();
+
         }
 
         private void LateUpdate()
@@ -175,7 +178,15 @@ namespace UGG.Move
 
         private void UpdateRollAnimation()
         {
-            
+            if (_inputSystem.playerRoll)
+            {
+                characterAnimator.SetTrigger(rollID);
+            }
+
+            if (characterAnimator.CheckAnimationTag("Roll"))
+            {
+                CharacterMoveInterface(transform.forward,characterAnimator.GetFloat(animationMoveID) * animMoveMult,true);
+            }
         }
         
         private void CharacterCrouchControl()

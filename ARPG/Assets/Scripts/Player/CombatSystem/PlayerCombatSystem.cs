@@ -31,8 +31,27 @@ namespace UGG.Combat
             if (_characterInputSystem.playerLAtk)
             {
                 _animator.SetTrigger(lAtkID);
-                
             }
+            
+            //如果玩按下鼠标左键
+            if (_characterInputSystem.playerLAtk)
+            {
+                //触发默认攻击动画
+                _animator.SetTrigger(lAtkID);
+            }
+            
+            //如果玩家一直按住鼠标右键
+            if (_characterInputSystem.playerRAtk)
+            {
+                //并且按下左键
+                if (_characterInputSystem.playerLAtk)
+                {
+                    //触发大剑攻击动画
+                    _animator.SetTrigger(lAtkID);
+                }
+            }
+            
+            _animator.SetBool(sWeaponID,_characterInputSystem.playerRAtk);
         }
 
 
@@ -42,7 +61,7 @@ namespace UGG.Combat
 
         private void ActionMotion()
         {
-            if (_animator.CheckAnimationTag("Attack"))
+            if (_animator.CheckAnimationTag("Attack") || _animator.CheckAnimationTag("GSAttack"))
             {
                 _characterMovementBase.CharacterMoveInterface(transform.forward,_animator.GetFloat(animationMoveID) * attackMoveMult,true);
             }

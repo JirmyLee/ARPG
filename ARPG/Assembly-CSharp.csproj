@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Config\Input\InputController.cs" />
      <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\MyTools\UnitExpandingFunction.cs" />
+     <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
      <Compile Include="Assets\Scripts\Interface\IState.cs" />
      <Compile Include="Assets\GameAssets\Evil Spirit Katana\Resources\LightFlickering.cs" />
      <Compile Include="Assets\Scripts\BaseClass\HealthSystem\CharacterHealthSystemBase.cs" />
@@ -60,7 +61,6 @@
      <Compile Include="Assets\Scripts\Config\Input\CharacterInputSystem.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\AIMovement.cs" />
      <Compile Include="Assets\Scripts\MyTools\Unit\Singleton\SingletonBase.cs" />
-     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\Player\HealthSystem\PlayerHealthSystem.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
@@ -75,8 +75,10 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Hit" />
      <Folder Include="Assets\Scripts\Config\Input" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack\Root" />
+     <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Standard Textures" />
      <Folder Include="Assets\Prefab\Player" />
+     <Folder Include="Assets\GameAssets\Sword Two-Hander\Model" />
      <Folder Include="Assets\Matirals\Build" />
      <None Include="Assets\GameAssets\Sci_Fi_Character_09\Materials\Standard_Two_Sided.shader" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Scene\Material" />
@@ -88,6 +90,7 @@
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09" />
      <Folder Include="Assets\GameAssets\Sound\Lang" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect" />
+     <Folder Include="Assets\GameAssets\Sword Two-Hander\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\CommonCrouch" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Hit" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip\Root" />
@@ -119,6 +122,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root" />
+     <Folder Include="Assets\GameAssets\Sword Two-Hander\Prefabs" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Dodge" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_Fi_Guard_Weapon" />
@@ -181,10 +185,8 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Hit\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch\Root" />
-     <Folder Include="Assets\TutorialInfo\Scripts" />
-     <Folder Include="Assets\TutorialInfo\Icons" />
+     <Folder Include="Assets\Scripts\AnimationEvent" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_Fi_Guard" />
-     <Folder Include="Assets\TutorialInfo" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Hit\Root" />
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry\NormalParry" />
@@ -194,13 +196,13 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip" />
      <Folder Include="Assets\Scripts\StateMachine" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch" />
+     <Folder Include="Assets\Scenes\SampleScene" />
      <Folder Include="Assets\GameAssets\Import\Thermal_Katana\materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Execution\Sample" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Execution\Root" />
      <Folder Include="Assets\Scripts\MyTools" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Execution_Sample" />
-     <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Root" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Sci_Fi_Character_09" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack\Root" />
@@ -212,6 +214,7 @@
      <Folder Include="Assets\Scripts\Config" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Hair" />
+     <Folder Include="Assets\GameAssets\Sword Two-Hander\Texturies" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Battle" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword" />
      <Folder Include="Assets\Matirals" />
@@ -226,6 +229,7 @@
      <Folder Include="Assets\ScriptabObject" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement\Inplace" />
      <Folder Include="Assets\Prefab" />
+     <Folder Include="Assets\GameAssets\Sword Two-Hander" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch\Root" />
      <Folder Include="Assets\Scripts\Player\CombatSystem" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Stand" />

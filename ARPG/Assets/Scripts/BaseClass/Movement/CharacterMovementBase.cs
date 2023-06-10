@@ -33,12 +33,13 @@ namespace UGG.Move
         [SerializeField] protected bool isOnGround;
         
         
-        //AnimationID
+        //Animation Paramters
         protected int animationMoveID = Animator.StringToHash("AnimationMove");
         protected int movementID = Animator.StringToHash("Movement");
         protected int horizontalID = Animator.StringToHash("Horizontal");
         protected int verticalID = Animator.StringToHash("Vertical");
         protected int runID = Animator.StringToHash("Run");
+        protected int rollID = Animator.StringToHash("Roll");
 
         protected virtual void Awake()
         {

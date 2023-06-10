@@ -19,6 +19,7 @@ namespace UGG.Combat
         protected int rAtkID = Animator.StringToHash("RAtk");
         protected int defenID = Animator.StringToHash("Defen");
         protected int animationMoveID = Animator.StringToHash("AnimationMove");
+        protected int sWeaponID = Animator.StringToHash("SWeapon");
         
         //攻击检测
         [SerializeField, Header("攻击检测")] protected Transform attackDetectionCenter;
