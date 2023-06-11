@@ -77,8 +77,10 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack\Root" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Standard Textures" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Prefab" />
      <Folder Include="Assets\Prefab\Player" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander\Model" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Mesh" />
      <Folder Include="Assets\Matirals\Build" />
      <None Include="Assets\GameAssets\Sci_Fi_Character_09\Materials\Standard_Two_Sided.shader" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Scene\Material" />
@@ -150,6 +152,7 @@
      <Folder Include="Assets\GameAssets\Sound" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09\Details" />
      <Folder Include="Assets\Scripts\GameAssetsScripts" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Dodge" />
      <Folder Include="Assets\Scenes\PostProcess" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Dodge" />
@@ -157,6 +160,7 @@
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry\PefaParry" />
      <Folder Include="Assets\GameAssets" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Sample" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Materials\white_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack" />
@@ -188,6 +192,7 @@
      <Folder Include="Assets\Scripts\AnimationEvent" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_Fi_Guard" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\Root" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Textures\White_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Hit\Root" />
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry\NormalParry" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement\Inplace" />
@@ -206,6 +211,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Root" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Sci_Fi_Character_09" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack\Root" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Textures\Neon_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack\Pose" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Movement" />
      <Folder Include="Assets\Scripts" />
@@ -215,7 +221,9 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Hair" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander\Texturies" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Mesh\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Battle" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Textures\Black_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword" />
      <Folder Include="Assets\Matirals" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Hit\Root" />
@@ -223,18 +231,23 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die\Inplace" />
      <Folder Include="Assets\Prefab\AudioMix" />
      <Folder Include="Assets\Scripts\Enemy" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Textures" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Dodge\Inplace" />
      <Folder Include="Assets\Scripts\GameAssetsScripts\ScriptableObject" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack\Inplace" />
      <Folder Include="Assets\ScriptabObject" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Materials\black_skin" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Animations" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement\Inplace" />
      <Folder Include="Assets\Prefab" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch\Root" />
      <Folder Include="Assets\Scripts\Player\CombatSystem" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Stand" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Scenes" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Dodge\Inplace" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\Materials\neon_skin" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject\Base" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Resources" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch\Inplace" />
@@ -242,6 +255,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect\Inplace" />
      <Folder Include="Assets\Prefab\PostProcess" />
+     <Folder Include="Assets\GameAssets\Ciber_Girl\video" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Dodge\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Common" />
      <Reference Include="UnityEngine">

@@ -5,7 +5,7 @@ public enum SoundAssetsType
 {
     hit,
     swordWave,
-    hSwordWave
+    GSwordWave
 }
 
 [CreateAssetMenu(fileName = "New SoundAssets",menuName = "CreataAssets/Sound")]
@@ -23,7 +23,7 @@ public class GameSoundAssetsSO : ScriptableObject
             if (!assetsDictionary.ContainsKey(assets[i].assetaName))
             {
                 assetsDictionary.Add(assets[i].assetaName,assets[i].assetsClip);
-                Debug.Log(assetsDictionary[assets[i].assetaName].Length);
+                Debug.LogFormat("asset name {0},length:{1}",assets[i].assetaName,assetsDictionary[assets[i].assetaName].Length);
             }
         }
     }
@@ -35,9 +35,9 @@ public class GameSoundAssetsSO : ScriptableObject
             case SoundAssetsType.hit:
                 return assetsDictionary["Hit"][Random.Range(0, assetsDictionary["Hit"].Length)];
             case SoundAssetsType.swordWave:
-                return assetsDictionary["SwordWave"][Random.Range(0, assetsDictionary["Hit"].Length)];
-            case SoundAssetsType.hSwordWave:
-                return assetsDictionary["HSwordWave"][Random.Range(0, assetsDictionary["Hit"].Length)];
+                return assetsDictionary["SwordWave"][Random.Range(0, assetsDictionary["SwordWave"].Length)];
+            case SoundAssetsType.GSwordWave:
+                return assetsDictionary["GSwordWave"][Random.Range(0, assetsDictionary["GSwordWave"].Length)];
             default:
                 Debug.Log("没找到");
                 return null;
@@ -46,7 +46,7 @@ public class GameSoundAssetsSO : ScriptableObject
 
     
     
-    
+    //外部添加音效的类
     [System.Serializable]
     public class SoundAssets
     {

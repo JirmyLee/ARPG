@@ -44,8 +44,6 @@ namespace UGG.Combat
         /// <param name="hitName">传递受伤动画名</param>
         protected virtual void OnAnimationAttackEvent(string hitName)
         {
-            if(!_animator.CheckAnimationTag("Attack")) return;
-
             Collider[] attackDetectionTargets = new Collider[4];
 
             int counts = Physics.OverlapSphereNonAlloc(attackDetectionCenter.position, attackDetectionRang,
@@ -62,7 +60,22 @@ namespace UGG.Combat
                     }
                 }
             }
-            GameAssets.Instance.PlaySoundEffect(_audioSource,SoundAssetsType.swordWave);
+            PlayWeaponEffect();
+        }
+
+        private void PlayWeaponEffect()
+        {
+            if (_animator.CheckAnimationTag("Attack"))
+            {
+                Debug.LogFormat("play sound SoundAssetsType.swordWave");
+                GameAssets.Instance.PlaySoundEffect(_audioSource,SoundAssetsType.swordWave);
+            }
+            
+            if (_animator.CheckAnimationTag("GSAttack"))
+            {
+                Debug.LogFormat("play sound SoundAssetsType.GSwordWave");
+                GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.GSwordWave);
+            }
         }
 
         private void OnDrawGizmos()
