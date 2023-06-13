@@ -92,6 +92,7 @@
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09" />
      <Folder Include="Assets\GameAssets\Sound\Lang" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Mesh" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\CommonCrouch" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Hit" />
@@ -108,6 +109,7 @@
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Resources\Particles" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Materials" />
      <Folder Include="Assets\Scripts\BaseClass\Movement" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Ect\AnimatorContrl" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Prefab" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\CommonCrouch\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Common" />
@@ -131,6 +133,7 @@
      <Folder Include="Assets\GameAssets\Sound\Lang\GS" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\CommonCrouch\Root" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09\Body" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Animation\Generic" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Model\Material" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect\Sample" />
@@ -186,15 +189,18 @@
      <Folder Include="Assets\Scripts\MyTools\Unit" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack\Inplace" />
      <Folder Include="Assets\Scripts\Enemy\Health" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Hit\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch\Root" />
      <Folder Include="Assets\Scripts\AnimationEvent" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Animation\Humanoid" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_Fi_Guard" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\Root" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Textures\White_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Hit\Root" />
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry\NormalParry" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Ect" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement\Inplace" />
      <Folder Include="Assets\Animator" />
      <Folder Include="Assets\Scripts\Player" />
@@ -218,6 +224,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Dodge" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Crouch\Root" />
      <Folder Include="Assets\Scripts\Config" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Hair" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander\Texturies" />
@@ -237,6 +244,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack\Inplace" />
      <Folder Include="Assets\ScriptabObject" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Materials\black_skin" />
+     <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Animation" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Animations" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement\Inplace" />
      <Folder Include="Assets\Prefab" />
