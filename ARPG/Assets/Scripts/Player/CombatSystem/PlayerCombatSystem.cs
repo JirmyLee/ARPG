@@ -19,11 +19,20 @@ namespace UGG.Combat
         //缓存
         private Collider[] detectionedTarget = new Collider[1];
         
+        //当前目标的引用
+        [SerializeField] private Transform currentTarget;
+        
         private void Update()
         {
             PlayerAttackAction();
             DetectionTarget();
             ActionMotion();
+            UpdateCurrentTarget();
+        }
+
+        private void LateUpdate()
+        {
+            OnAttackActionAutoLock();
         }
 
         private void PlayerAttackAction()
@@ -54,10 +63,17 @@ namespace UGG.Combat
             _animator.SetBool(sWeaponID,_characterInputSystem.playerRAtk);
         }
 
-
-
-
-
+        //攻击动作自动锁定目标
+        private void OnAttackActionAutoLock()
+        {
+            if (CanAttackLockOn())
+            {
+                if (_animator.CheckAnimationTag("Attack") || _animator.CheckAnimationTag("GSAttack"))
+                {
+                    transform.root.rotation = transform.LockOnTarget(currentTarget, transform.root,50f);    //旋转当前角色的root子节点，LockOnTarget为拓展方法
+                }
+            }
+        }
 
         private void ActionMotion()
         {
@@ -75,7 +91,7 @@ namespace UGG.Combat
         /// <returns></returns>
         private bool CanAttackLockOn()
         {
-            if (_animator.CheckAnimationTag("Attack"))
+            if (_animator.CheckAnimationTag("Attack") ||_animator.CheckAnimationTag("GSAttack"))
             {
                 if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.75f)
                 {
@@ -90,8 +106,33 @@ namespace UGG.Combat
         {
             int targetCount = Physics.OverlapSphereNonAlloc(detectionCenter.position, detectionRang, detectionedTarget,
                 enemyLayer);
+
+            if (targetCount > 0)
+            {
+                SetCurrentTarget(detectionedTarget[0].transform);
+            }
+        }
+
+        private void SetCurrentTarget(Transform target)
+        {
+            //当前目标为空或传进来的目标和当前目标不是同一个
+            if (currentTarget == null || currentTarget != target)
+            {
+                currentTarget = target; //如果想把当前目标砍死 应该去掉currentTarget != target
+            }
+        }
+
+        private void UpdateCurrentTarget()
+        {
             
-            //后续功能补充
+            if (_animator.CheckAnimationTag("Motion"))
+            {
+                if (_characterInputSystem.playerMovement.sqrMagnitude > 0)
+                {
+                    //移动时清空当前目标
+                    currentTarget = null;
+                }
+            }
         }
         
         #endregion
