@@ -39,6 +39,7 @@ public static class UnitExpandingFunction
         if (target == null) return self.rotation;
 
         Vector3 targetDirection = (target.position - self.position).normalized;
+        targetDirection.y = 0f; //防止倾斜对着目标
         Quaternion newRotation = Quaternion.LookRotation(targetDirection);
         
         return  Quaternion.Lerp(self.rotation,newRotation,lerpTime * Time.deltaTime);

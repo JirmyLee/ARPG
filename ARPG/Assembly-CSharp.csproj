@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\BaseClass\Movement\CharacterMovementBase.cs" />
      <Compile Include="Assets\Scripts\Player\Camera\TP_CameraController.cs" />
      <Compile Include="Assets\Scripts\Config\Input\InputController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Combat\AICombatSystem.cs" />
      <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\MyTools\UnitExpandingFunction.cs" />
      <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
@@ -179,6 +180,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip\Inplace" />
      <Folder Include="Assets\Scripts\Player\HealthSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die" />
+     <Folder Include="Assets\Scripts\Enemy\Combat" />
      <Folder Include="Assets\GameAssets\Import" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\Inplace" />
      <Folder Include="Assets\Scripts\Enemy\Movement" />
