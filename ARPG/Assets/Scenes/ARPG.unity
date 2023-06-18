@@ -238,6 +238,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3191567287015338782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &570638781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 570638783}
+  - component: {fileID: 570638782}
+  m_Layer: 0
+  m_Name: GamObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &570638782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570638781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23bfdc3311eb74c40a7c90076e1c9a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assetsList:
+  - assetsName: Timer
+    count: 10
+    prefab:
+    - {fileID: 4412337038463860234, guid: c1ee7d7674eb4a64faebaa341ead206f, type: 3}
+  poolObjectParent: {fileID: 0}
+--- !u!4 &570638783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570638781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -64.12439, y: 1.6164612, z: 32.210945}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1284,16 @@ PrefabInstance:
         type: 3}
       propertyPath: animMoveMult
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277240882114777235, guid: 0504336c24266b141a524cbebec8e2f2,
+        type: 3}
+      propertyPath: whatIsObs.m_Bits
+      value: 1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277240882114777235, guid: 0504336c24266b141a524cbebec8e2f2,
+        type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 4277240882559218601, guid: 0504336c24266b141a524cbebec8e2f2,
         type: 3}

@@ -41,10 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\StateMachine\Scripts\Condition\ToConbatCondition.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\Base\CharacterStateBaseSO.cs" />
      <Compile Include="Assets\Scripts\Interface\IDamagar.cs" />
      <Compile Include="Assets\Scripts\GameAssetsScripts\GameAssets.cs" />
+     <Compile Include="Assets\Scripts\Interface\IPool.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\Base\CharacterStateActionBaseSO.cs" />
      <Compile Include="Assets\Scripts\StateMachine\MainStateMachineController.cs" />
      <Compile Include="Assets\Scripts\AnimationSMB\AnimationResetTrigger.cs" />
@@ -53,6 +55,7 @@
      <Compile Include="Assets\Scripts\Config\Input\InputController.cs" />
      <Compile Include="Assets\Scripts\Enemy\Combat\AICombatSystem.cs" />
      <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\ConditionSO.cs" />
+     <Compile Include="Assets\Scripts\GameObjectPool\BaseClass\GameObjectPoolSystem.cs" />
      <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\MyTools\UnitExpandingFunction.cs" />
      <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
@@ -68,18 +71,20 @@
      <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\StateActionSO.cs" />
      <Compile Include="Assets\Scripts\Player\HealthSystem\PlayerHealthSystem.cs" />
      <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\TransitionSO.cs" />
+     <Compile Include="Assets\Scripts\MyTools\Timer.cs" />
+     <Compile Include="Assets\Scripts\GameObjectPool\PoolItemBase.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AISleep.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
      <Compile Include="Assets\Scripts\GameAssetsScripts\ScriptableObject\Sound\GameSoundAssetsSO.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AICombat.cs" />
-     <Compile Include="Assets\StateMachine\Scripts\Condition\ToConbatCondition.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Movement" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Model" />
      <Folder Include="Assets\Scripts\GameAssetsScripts\ScriptableObject\Sound" />
+     <Folder Include="Assets\StateMachine\ScriptableObject\Condition" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Hit" />
      <Folder Include="Assets\Scripts\Config\Input" />
@@ -96,6 +101,7 @@
      <Folder Include="Assets\StateMachine\Scripts\StateMachine\StatMachineSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Hit\Inplace" />
+     <Folder Include="Assets\Scripts\GameObjectPool" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Prefabs" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Inplace" />
@@ -184,6 +190,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Crouch" />
      <Folder Include="Assets\StateMachine\Scripts" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die\Root" />
+     <Folder Include="Assets\StateMachine\ScriptableObject\Transition" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09_Weapon" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Model\Weapon" />
@@ -193,6 +200,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip\Inplace" />
      <Folder Include="Assets\Scripts\Player\HealthSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die" />
+     <Folder Include="Assets\Scripts\GameObjectPool\BaseClass" />
      <Folder Include="Assets\Scripts\Enemy\Combat" />
      <Folder Include="Assets\StateMachine\Scripts\Condition" />
      <Folder Include="Assets\GameAssets\Import" />
@@ -258,6 +266,7 @@
      <Folder Include="Assets\Scripts\Enemy" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Textures" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Dodge\Inplace" />
+     <Folder Include="Assets\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\GameAssetsScripts\ScriptableObject" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack\Inplace" />
      <Folder Include="Assets\ScriptabObject" />
@@ -283,6 +292,7 @@
      <Folder Include="Assets\Prefab\PostProcess" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\video" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Dodge\Root" />
+     <Folder Include="Assets\StateMachine\ScriptableObject\State" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Common" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Program Files\Unity Editor\2021.3.25f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

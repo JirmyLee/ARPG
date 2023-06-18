@@ -35,8 +35,25 @@ namespace UGG.Combat
             OnAttackActionAutoLock();
         }
 
+        //是否允许攻击输入
+        private bool CanInputAttack()
+        {
+            //攻击动画过渡时间必须从0.27%以后开始，且不能勾选exit time
+            if (_animator.CheckAnimationTag("Motion") || _animator.CheckCurrentTagAnimationTimeIsExceed("Attack", 0.27f))
+            {
+                return true;
+            }
+            
+            return false;
+        }
+        
         private void PlayerAttackAction()
         {
+            if (!CanInputAttack())
+            {
+                return;
+            }
+            
             if (_characterInputSystem.playerLAtk)
             {
                 _animator.SetTrigger(lAtkID);
