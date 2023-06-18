@@ -55,7 +55,7 @@ namespace UGG.Combat
                 {
                     if (attackDetectionTargets[i].TryGetComponent(out IDamagar damagar))
                     {
-                        damagar.TakeDamager(hitName);
+                        damagar.TakeDamager(0f,hitName,transform.root.transform);
                         
                     }
                 }
@@ -67,13 +67,13 @@ namespace UGG.Combat
         {
             if (_animator.CheckAnimationTag("Attack"))
             {
-                Debug.LogFormat("play sound SoundAssetsType.swordWave");
+                //Debug.LogFormat("play sound SoundAssetsType.swordWave");
                 GameAssets.Instance.PlaySoundEffect(_audioSource,SoundAssetsType.swordWave);
             }
             
             if (_animator.CheckAnimationTag("GSAttack"))
             {
-                Debug.LogFormat("play sound SoundAssetsType.GSwordWave");
+                //Debug.LogFormat("play sound SoundAssetsType.GSwordWave");
                 GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.GSwordWave);
             }
         }

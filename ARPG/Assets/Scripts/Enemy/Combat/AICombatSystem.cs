@@ -13,6 +13,9 @@ public class AICombatSystem : CharacterCombatSystemBase
     private Collider[] colliderTarget = new Collider[1];
     [SerializeField, Header("目标")] private Transform currentTarget;
     
+    //AnimationID
+    private int lockOnID = Animator.StringToHash("LockOn");
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,8 @@ public class AICombatSystem : CharacterCombatSystemBase
     void Update()
     {
         AIView();
+        LockOnTarget();
+        UpdateAnimationMove();
     }
 
     private void AIView()
@@ -50,6 +55,36 @@ public class AICombatSystem : CharacterCombatSystemBase
         }
 
         //currentTarget = null;
+    }
+
+    private void LockOnTarget()
+    {
+        if (_animator.CheckAnimationTag("Motion") && currentTarget != null)
+        {
+            _animator.SetFloat(lockOnID,1);
+            transform.root.rotation = transform.LockOnTarget(currentTarget, transform.root.transform, 50f);
+        }
+        else
+        {
+            _animator.SetFloat(lockOnID,0);
+        }
+    }
+    
+    public Transform GetCurrentTarget()
+    {
+        return currentTarget;
+    }
+
+    public float GetCurrentTargetDistance() => Vector3.Distance(currentTarget.position, transform.root.position);
+
+    public float GetAttackRange() => attackDetectionRang;
+
+    private void UpdateAnimationMove()
+    {
+        if (_animator.CheckAnimationTag("Roll"))
+        {
+            _characterMovementBase.CharacterMoveInterface(transform.root.forward,_animator.GetFloat(animationMoveID),true);
+        }
     }
     
     private void OnDrawGizmos()

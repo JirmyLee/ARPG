@@ -52,20 +52,28 @@
      <Compile Include="Assets\Scripts\Player\Camera\TP_CameraController.cs" />
      <Compile Include="Assets\Scripts\Config\Input\InputController.cs" />
      <Compile Include="Assets\Scripts\Enemy\Combat\AICombatSystem.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\ConditionSO.cs" />
      <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\MyTools\UnitExpandingFunction.cs" />
      <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
      <Compile Include="Assets\Scripts\Interface\IState.cs" />
      <Compile Include="Assets\GameAssets\Evil Spirit Katana\Resources\LightFlickering.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\新版转换容器\NB_Transition.cs" />
      <Compile Include="Assets\Scripts\BaseClass\HealthSystem\CharacterHealthSystemBase.cs" />
      <Compile Include="Assets\Scripts\Enemy\Health\AIHealthSystem.cs" />
      <Compile Include="Assets\Scripts\Config\Input\CharacterInputSystem.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\StatMachineSystem\StateMachineSystem.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\AIMovement.cs" />
      <Compile Include="Assets\Scripts\MyTools\Unit\Singleton\SingletonBase.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\StateActionSO.cs" />
      <Compile Include="Assets\Scripts\Player\HealthSystem\PlayerHealthSystem.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\TransitionSO.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\State\AISleep.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
      <Compile Include="Assets\Scripts\GameAssetsScripts\ScriptableObject\Sound\GameSoundAssetsSO.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\State\AICombat.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\Condition\ToConbatCondition.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />
@@ -85,6 +93,7 @@
      <Folder Include="Assets\Matirals\Build" />
      <None Include="Assets\GameAssets\Sci_Fi_Character_09\Materials\Standard_Two_Sided.shader" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Scene\Material" />
+     <Folder Include="Assets\StateMachine\Scripts\StateMachine\StatMachineSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Hit\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement" />
@@ -108,6 +117,7 @@
      <Folder Include="Assets\Scripts\Player\Movement" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Execution" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Resources\Particles" />
+     <Folder Include="Assets\StateMachine\Scripts\State" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Materials" />
      <Folder Include="Assets\Scripts\BaseClass\Movement" />
      <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Ect\AnimatorContrl" />
@@ -148,7 +158,9 @@
      <Folder Include="Assets\Scripts\Player\Camera" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Crouch\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation" />
+     <Folder Include="Assets\StateMachine\Scripts\StateMachine" />
      <Folder Include="Assets\Animator\Player" />
+     <Folder Include="Assets\StateMachine" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Root" />
      <Folder Include="Assets\Scripts\BaseClass\HealthSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die\Inplace" />
@@ -170,6 +182,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Sci_Fi_Guard" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Crouch" />
+     <Folder Include="Assets\StateMachine\Scripts" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die\Root" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09_Weapon" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09" />
@@ -181,6 +194,7 @@
      <Folder Include="Assets\Scripts\Player\HealthSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die" />
      <Folder Include="Assets\Scripts\Enemy\Combat" />
+     <Folder Include="Assets\StateMachine\Scripts\Condition" />
      <Folder Include="Assets\GameAssets\Import" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\Inplace" />
      <Folder Include="Assets\Scripts\Enemy\Movement" />
@@ -219,6 +233,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Root" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Sci_Fi_Character_09" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack\Root" />
+     <Folder Include="Assets\StateMachine\Scripts\StateMachine\BaseSO" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Textures\Neon_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack\Pose" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Movement" />
@@ -228,6 +243,7 @@
      <Folder Include="Assets\Scripts\Config" />
      <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense" />
+     <Folder Include="Assets\StateMachine\Scripts\StateMachine\新版转换容器" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Hair" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander\Texturies" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Mesh\Materials" />
