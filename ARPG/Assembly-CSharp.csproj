@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;UNITY_UGP_API;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;UNITY_ANALYTICS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;UNITY_UGP_API;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Enemy\Combat\AICombatSystem.cs" />
      <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\ConditionSO.cs" />
      <Compile Include="Assets\Scripts\GameObjectPool\BaseClass\GameObjectPoolSystem.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\CombatSkill\CombatSkillBase.cs" />
      <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\MyTools\UnitExpandingFunction.cs" />
      <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
      <Compile Include="Assets\Scripts\GameAssetsScripts\ScriptableObject\Sound\GameSoundAssetsSO.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AICombat.cs" />
+     <Compile Include="Assets\GameAssets\TwinSword_Expansion_V2\Script\WeaponMasterUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />
@@ -90,6 +92,7 @@
      <Folder Include="Assets\Scripts\Config\Input" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Attack\Root" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Common" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Standard Textures" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Prefab" />
      <Folder Include="Assets\Prefab\Player" />
@@ -105,6 +108,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Prefabs" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Inplace" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\General" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09" />
      <Folder Include="Assets\GameAssets\Sound\Lang" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect" />
@@ -116,15 +120,18 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose" />
      <Folder Include="Assets\GameAssets\Import\Thermal_Katana" />
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Scene" />
      <Folder Include="Assets\Scripts\Interface" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Dodge\Root" />
      <Folder Include="Assets\GameAssets\Import\Thermal_Katana\meshes" />
      <Folder Include="Assets\GameAssets\Import\Thermal_Katana\textures" />
      <Folder Include="Assets\Scripts\Player\Movement" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\Hit" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Execution" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Resources\Particles" />
      <Folder Include="Assets\StateMachine\Scripts\State" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Materials" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Dodge" />
      <Folder Include="Assets\Scripts\BaseClass\Movement" />
      <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Ect\AnimatorContrl" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Prefab" />
@@ -136,6 +143,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch\Inplace" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Model\Weapon\Materials" />
      <Folder Include="Assets\Prefab\Buld" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Scene" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana" />
@@ -158,6 +166,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Execution\Inplace" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject" />
      <Folder Include="Assets\ScriptabObject\SoundAssts\Data" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\Common" />
      <None Include="Assets\GameAssets\Import\Thermal_Katana\license.txt" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Scenes" />
@@ -169,6 +178,9 @@
      <Folder Include="Assets\StateMachine" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Root" />
      <Folder Include="Assets\Scripts\BaseClass\HealthSystem" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Model\Weapon" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die\Inplace" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\3DModel" />
      <Folder Include="Assets\GameAssets\Sound" />
@@ -182,17 +194,22 @@
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry\PefaParry" />
      <Folder Include="Assets\GameAssets" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Sample" />
+     <Folder Include="Assets\Resources" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Materials\white_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\Dodge" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Attack" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Sci_Fi_Guard" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Script" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Crouch" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\Movement" />
      <Folder Include="Assets\StateMachine\Scripts" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die\Root" />
      <Folder Include="Assets\StateMachine\ScriptableObject\Transition" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09_Weapon" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_FI_Character_09" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Model" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Model\Weapon" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Root\Battle" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement\Root" />
@@ -200,6 +217,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip\Inplace" />
      <Folder Include="Assets\Scripts\Player\HealthSystem" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\General" />
      <Folder Include="Assets\Scripts\GameObjectPool\BaseClass" />
      <Folder Include="Assets\Scripts\Enemy\Combat" />
      <Folder Include="Assets\StateMachine\Scripts\Condition" />
@@ -217,7 +235,9 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement\Root" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Hit\Inplace" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch\Root" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Execution_Sample" />
      <Folder Include="Assets\Scripts\AnimationEvent" />
+     <Folder Include="Assets\Scripts\StateMachine\CombatSkill" />
      <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Animation\Humanoid" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Sci_Fi_Guard" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Common\Root" />
@@ -228,8 +248,12 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Movement\Inplace" />
      <Folder Include="Assets\Animator" />
      <Folder Include="Assets\Scripts\Player" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Movement" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Scene\Material" />
      <Folder Include="Assets\Scripts\StateMachine" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Model\Material" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch" />
      <Folder Include="Assets\Scenes\SampleScene" />
      <Folder Include="Assets\GameAssets\Import\Thermal_Katana\materials" />
@@ -252,9 +276,11 @@
      <Folder Include="Assets\GameAssets\Orientalism_Dual_Blade_Anim_Set\Materials" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense" />
      <Folder Include="Assets\StateMachine\Scripts\StateMachine\新版转换容器" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Textures\Hair" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander\Texturies" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Mesh\Materials" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\Battle" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Battle" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Textures\Black_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword" />
@@ -276,6 +302,7 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Movement\Inplace" />
      <Folder Include="Assets\Prefab" />
      <Folder Include="Assets\GameAssets\Sword Two-Hander" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Battle" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch\Root" />
      <Folder Include="Assets\Scripts\Player\CombatSystem" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Mesh\Stand" />
@@ -288,11 +315,13 @@
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Crouch\Inplace" />
      <Folder Include="Assets\ScriptabObject\SoundAssts" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Die\Root" />
+     <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Hit" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Deflect\Inplace" />
      <Folder Include="Assets\Prefab\PostProcess" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\video" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\Bow\Dodge\Root" />
      <Folder Include="Assets\StateMachine\ScriptableObject\State" />
+     <None Include="Assets\Resources\BillingMode.json" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\GreatSword\Inplace\Common" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Program Files\Unity Editor\2021.3.25f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -545,6 +574,18 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.0\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.StandardEvents">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.Tracker">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>E:\Program Files\Unity Editor\2021.3.25f1c1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -1022,6 +1063,48 @@
      </Reference>
      <Reference Include="Unity.SysrootPackage.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Purchasing.Common">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityStub">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Codeless">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.DataPrivacy">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityCore">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Stores">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+     </Reference>
+     <Reference Include="Analytics">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Purchasing">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

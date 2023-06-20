@@ -77,6 +77,8 @@ public class AICombatSystem : CharacterCombatSystemBase
 
     public float GetCurrentTargetDistance() => Vector3.Distance(currentTarget.position, transform.root.position);
 
+    public Vector3 GetDirectionForTarget() => (currentTarget.position - transform.root.position).normalized;
+    
     public float GetAttackRange() => attackDetectionRang;
 
     private void UpdateAnimationMove()
@@ -110,5 +112,16 @@ public class AICombatSystem : CharacterCombatSystemBase
         //反余弦计算角度
         float offsetAngle = Mathf.Acos(dot) * Mathf.Rad2Deg; //弧度转度
         return offsetAngle < sectorAngle * .5f && direction.magnitude < sectorRadius;
+    }
+    
+    public CombatSkillBase GetAnDoneSkill()
+    {
+        // for (int i = 0; i < skills.Count; i++)
+        // {
+        //     if (skills[i].GetSkillIsDone()) return skills[i];
+        //     else continue;
+        // }
+
+        return null;
     }
 }
