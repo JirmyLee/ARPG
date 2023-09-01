@@ -63,11 +63,11 @@ public class AICombat : StateActionSO
 
                 randomHorizontal = GetRandomHorizontal();
 
-                if (combatSystem.GetCurrentTargetDistance() < 1.5 + 0.05f)
+                if (combatSystem.GetCurrentTargetDistance() < 1.5 + 0.05f)  //和玩家距离小于一定范围
                 {
                     if (!animator.CheckAnimationTag("Hit") || !animator.CheckAnimationTag("Defen"))
                     {
-                        animator.Play("Attack_0", 0, 0f);
+                        animator.Play("Attack_Combat_1", 0, 0f);
 
                         randomHorizontal = GetRandomHorizontal();
                     }

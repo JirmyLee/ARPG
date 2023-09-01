@@ -41,45 +41,45 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\StateMachine\Scripts\Condition\ToConbatCondition.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerMovementController.cs" />
-     <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\Base\CharacterStateBaseSO.cs" />
-     <Compile Include="Assets\Scripts\Interface\IDamagar.cs" />
      <Compile Include="Assets\Scripts\GameAssetsScripts\GameAssets.cs" />
      <Compile Include="Assets\Scripts\Interface\IPool.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\Base\CharacterStateActionBaseSO.cs" />
-     <Compile Include="Assets\Scripts\StateMachine\MainStateMachineController.cs" />
      <Compile Include="Assets\Scripts\AnimationSMB\AnimationResetTrigger.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Movement\CharacterMovementBase.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\ConditionSO.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\CombatSkill\CombatSkillBase.cs" />
+     <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
+     <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Health\AIHealthSystem.cs" />
+     <Compile Include="Assets\Scripts\Config\Input\CharacterInputSystem.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\StatMachineSystem\StateMachineSystem.cs" />
+     <Compile Include="Assets\Scripts\MyTools\Unit\Singleton\SingletonBase.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\TransitionSO.cs" />
+     <Compile Include="Assets\Scripts\GameObjectPool\PoolItemBase.cs" />
+     <Compile Include="Assets\Scripts\GameAssetsScripts\ScriptableObject\Sound\GameSoundAssetsSO.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\State\AICombat.cs" />
+     <Compile Include="Assets\StateMachine\Scripts\Condition\ToConbatCondition.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\Base\CharacterStateBaseSO.cs" />
+     <Compile Include="Assets\Scripts\Interface\IDamagar.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\MainStateMachineController.cs" />
+     <Compile Include="Assets\GameAssets\TwinSword_Expansion_V2\Script\WeaponMasterUI.cs" />
      <Compile Include="Assets\Scripts\Player\Camera\TP_CameraController.cs" />
      <Compile Include="Assets\Scripts\Config\Input\InputController.cs" />
      <Compile Include="Assets\Scripts\Enemy\Combat\AICombatSystem.cs" />
-     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\ConditionSO.cs" />
      <Compile Include="Assets\Scripts\GameObjectPool\BaseClass\GameObjectPoolSystem.cs" />
-     <Compile Include="Assets\Scripts\StateMachine\CombatSkill\CombatSkillBase.cs" />
-     <Compile Include="Assets\Scripts\Player\CombatSystem\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\MyTools\UnitExpandingFunction.cs" />
-     <Compile Include="Assets\Scripts\AnimationEvent\CharacterWeaponAnimEvent.cs" />
      <Compile Include="Assets\Scripts\Interface\IState.cs" />
      <Compile Include="Assets\GameAssets\Evil Spirit Katana\Resources\LightFlickering.cs" />
      <Compile Include="Assets\StateMachine\Scripts\StateMachine\新版转换容器\NB_Transition.cs" />
      <Compile Include="Assets\Scripts\BaseClass\HealthSystem\CharacterHealthSystemBase.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Health\AIHealthSystem.cs" />
-     <Compile Include="Assets\Scripts\Config\Input\CharacterInputSystem.cs" />
-     <Compile Include="Assets\StateMachine\Scripts\StateMachine\StatMachineSystem\StateMachineSystem.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\AIMovement.cs" />
-     <Compile Include="Assets\Scripts\MyTools\Unit\Singleton\SingletonBase.cs" />
      <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\StateActionSO.cs" />
      <Compile Include="Assets\Scripts\Player\HealthSystem\PlayerHealthSystem.cs" />
-     <Compile Include="Assets\StateMachine\Scripts\StateMachine\BaseSO\TransitionSO.cs" />
      <Compile Include="Assets\Scripts\MyTools\Timer.cs" />
-     <Compile Include="Assets\Scripts\GameObjectPool\PoolItemBase.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AISleep.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
-     <Compile Include="Assets\Scripts\GameAssetsScripts\ScriptableObject\Sound\GameSoundAssetsSO.cs" />
-     <Compile Include="Assets\StateMachine\Scripts\State\AICombat.cs" />
-     <Compile Include="Assets\GameAssets\TwinSword_Expansion_V2\Script\WeaponMasterUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />
@@ -194,7 +194,6 @@
      <Folder Include="Assets\GameAssets\Sound\Lang\Parry\PefaParry" />
      <Folder Include="Assets\GameAssets" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Defense\Sample" />
-     <Folder Include="Assets\Resources" />
      <Folder Include="Assets\GameAssets\Ciber_Girl\Materials\white_skin" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Die" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\CommonCrouch" />
@@ -251,6 +250,7 @@
      <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Movement" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\Common\Unarm&amp;Equip" />
      <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Scene\Material" />
+     <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Scripts\StateMachine" />
      <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2" />
      <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Model\Material" />
@@ -572,9 +572,6 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>E:\Program Files\Unity Editor\2021.3.25f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.0\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
@@ -583,6 +580,9 @@
      </Reference>
      <Reference Include="Unity.Analytics.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Analytics.Tracker">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
@@ -953,8 +953,8 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>E:\Program Files\Unity Editor\2021.3.25f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <Reference Include="Purchasing.Common">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
@@ -962,14 +962,71 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEngine.Purchasing">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityStub">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InputSystem">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Analytics">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.DataPrivacy">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Codeless">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="PPv2URPConverters">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -986,17 +1043,8 @@
      <Reference Include="Unity.TextMeshPro">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Searcher.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
@@ -1004,23 +1052,11 @@
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InputSystem">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -1028,11 +1064,14 @@
      <Reference Include="Unity.Mathematics">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityCore">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
@@ -1040,20 +1079,23 @@
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <Reference Include="UnityEngine.Purchasing.Stores">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Purchasing">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements.Editor">
+     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
@@ -1063,48 +1105,6 @@
      </Reference>
      <Reference Include="Unity.SysrootPackage.Editor">
      <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Purchasing.Common">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Purchasing.SecurityStub">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Advertisements.Editor">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Purchasing.Codeless">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Purchasing">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Advertisements">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Services.Core">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Analytics.DataPrivacy">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Purchasing.SecurityCore">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.Purchasing.Stores">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
-     </Reference>
-     <Reference Include="Analytics">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\Analytics.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.Purchasing">
-     <HintPath>E:\WorkSpace\Unity\ARPG\ARPG\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

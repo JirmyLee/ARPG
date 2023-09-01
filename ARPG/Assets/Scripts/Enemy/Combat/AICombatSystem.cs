@@ -15,6 +15,7 @@ public class AICombatSystem : CharacterCombatSystemBase
     
     //AnimationID
     private int lockOnID = Animator.StringToHash("LockOn");
+    [SerializeField] private float animationMoveMult;
     
     // Start is called before the first frame update
     void Start()
@@ -80,12 +81,13 @@ public class AICombatSystem : CharacterCombatSystemBase
     public Vector3 GetDirectionForTarget() => (currentTarget.position - transform.root.position).normalized;
     
     public float GetAttackRange() => attackDetectionRang;
-
+    
+    
     private void UpdateAnimationMove()
     {
-        if (_animator.CheckAnimationTag("Roll"))
+        if (_animator.CheckAnimationTag("Roll") || _animator.CheckAnimationTag("Attack"))
         {
-            _characterMovementBase.CharacterMoveInterface(transform.root.forward,_animator.GetFloat(animationMoveID),true);
+            _characterMovementBase.CharacterMoveInterface(transform.root.forward, _animator.GetFloat(animationMoveID) * animationMoveMult, true);
         }
     }
     
