@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AISleep.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
+     <Compile Include="Assets\Scripts\StateMachine\CombatSkill\Skill\NormalSkill.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />
@@ -129,6 +130,7 @@
      <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Root\Hit" />
      <Folder Include="Assets\GameAssets\GreatSword_Animset\Animation\katana\APose\Execution" />
      <Folder Include="Assets\GameAssets\Evil Spirit Katana\Resources\Particles" />
+     <Folder Include="Assets\Scripts\StateMachine\CombatSkill\Skill" />
      <Folder Include="Assets\StateMachine\Scripts\State" />
      <Folder Include="Assets\GameAssets\Sci_Fi_Character_09\Materials" />
      <Folder Include="Assets\GameAssets\TwinSword_Expansion_V2\Animation\Inplace\Dodge" />

@@ -254,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &570638782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +873,8 @@ MonoBehaviour:
     m_Bits: 1024
   currentTarget: {fileID: 0}
   animationMoveMult: 1.5
+  skills:
+  - {fileID: 11400000, guid: 168b0e36f7c3db74d84948b7dfc74a7c, type: 2}
 --- !u!4 &1480859245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8386252596071195186, guid: 4c062b4470539b4499fb986e4adec7b3,

@@ -10,6 +10,7 @@ public class AICombat : StateActionSO
 
     private float maxCombatDirection = 1.5f;
 
+    //AI战斗状态，各自战斗相关的逻辑会在这个状态来处理
     [SerializeField] private CombatSkillBase currentSkill;
     
     public override void OnUpdate()
@@ -34,7 +35,7 @@ public class AICombat : StateActionSO
         {
             currentSkill.InvokeSkill();
 
-            if (!currentSkill.GetSkillIsDone())
+            if (!currentSkill.GetSkillCanCast())
             {
                 currentSkill = null;
             }
@@ -49,12 +50,13 @@ public class AICombat : StateActionSO
         }
     }
 
+    //控制移动
     private void NoCombatMove()
     {
         //如果动画处于Motion状态
         if (animator.CheckAnimationTag("Motion"))
         {
-            if (combatSystem.GetCurrentTargetDistance() < 2f + 0.1f)
+            if (combatSystem.GetCurrentTargetDistance() < 1.75f + 0.1f)
             {
                 movement.CharacterMoveInterface(-combatSystem.GetDirectionForTarget(), 1.4f, true);
 
@@ -63,7 +65,7 @@ public class AICombat : StateActionSO
 
                 randomHorizontal = GetRandomHorizontal();
 
-                if (combatSystem.GetCurrentTargetDistance() < 1.5 + 0.05f)  //和玩家距离小于一定范围
+                if (combatSystem.GetCurrentTargetDistance() < 1f + 0.05f)  //和玩家距离小于一定范围
                 {
                     if (!animator.CheckAnimationTag("Hit") || !animator.CheckAnimationTag("Defen"))
                     {
@@ -73,7 +75,7 @@ public class AICombat : StateActionSO
                     }
                 }
             }
-            else if (combatSystem.GetCurrentTargetDistance() > 2f + 0.1f && combatSystem.GetCurrentTargetDistance() < 6.1 + 0.5f)
+            else if (combatSystem.GetCurrentTargetDistance() > 1.75f + 0.1f && combatSystem.GetCurrentTargetDistance() < 6.1 + 0.5f)
             {
                 if (HorizontalDirectionHasObject(randomHorizontal))
                 {

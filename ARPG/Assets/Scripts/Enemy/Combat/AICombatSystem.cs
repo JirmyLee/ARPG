@@ -15,12 +15,16 @@ public class AICombatSystem : CharacterCombatSystemBase
     
     //AnimationID
     private int lockOnID = Animator.StringToHash("LockOn");
+    
     [SerializeField] private float animationMoveMult;
+    
+    //在属性面板序列号技能搭配
+    [SerializeField, Header("技能搭配")] private List<CombatSkillBase> skills = new List<CombatSkillBase>();
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        InitAllSkill();
     }
 
     // Update is called once per frame
@@ -116,14 +120,57 @@ public class AICombatSystem : CharacterCombatSystemBase
         return offsetAngle < sectorAngle * .5f && direction.magnitude < sectorRadius;
     }
     
+    #region 技能
+
+    private void InitAllSkill()
+    {
+        if (skills.Count == 0) return;
+
+        for (int i = 0; i < skills.Count; i++)
+        {
+            skills[i].InitSkill(_animator, this, _characterMovementBase);
+
+            //如果当前技能不允许使用
+            if (!skills[i].GetSkillCanCast())
+            {
+                //重置
+                skills[i].ResetSkill();
+            }
+        }
+    }
+
+    //获取一个可用的技能
     public CombatSkillBase GetAnDoneSkill()
     {
-        // for (int i = 0; i < skills.Count; i++)
-        // {
-        //     if (skills[i].GetSkillIsDone()) return skills[i];
-        //     else continue;
-        // }
+        for (int i = 0; i < skills.Count; i++)
+        {
+            if (skills[i].GetSkillCanCast()) return skills[i];
+        }
+        
+         return null;
+    }
+
+    public CombatSkillBase GetSkillUseName(string name)
+    {
+        for (int i = 0; i < skills.Count; i++)
+        {
+            if (skills[i].GetSkillName().Equals(name)) 
+                return skills[i];
+        }
 
         return null;
     }
+
+    public CombatSkillBase GetSkillUseID(int id)
+    {
+        for (int i = 0; i < skills.Count; i++)
+        {
+            if (skills[i].GetSkillID() == id) 
+                return skills[i];
+        }
+
+        return null;
+    }
+
+    #endregion
 }
