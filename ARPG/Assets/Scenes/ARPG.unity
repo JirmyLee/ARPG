@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18154702, g: 0.22719009, b: 0.30740643, a: 1}
+  m_IndirectSpecularColor: {r: 0.18154702, g: 0.22719009, b: 0.30740646, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -875,6 +875,7 @@ MonoBehaviour:
   animationMoveMult: 1.5
   skills:
   - {fileID: 11400000, guid: 168b0e36f7c3db74d84948b7dfc74a7c, type: 2}
+  - {fileID: 11400000, guid: 8030ec5180a3f7344b7dddc0abb845ff, type: 2}
 --- !u!4 &1480859245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8386252596071195186, guid: 4c062b4470539b4499fb986e4adec7b3,
@@ -918,6 +919,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1291159926}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1657953772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3228805064566500348, guid: 4c062b4470539b4499fb986e4adec7b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8386252596454816644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1657953775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657953772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8381d076874897241820bdca8ad1401f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDetectionCenter: {fileID: 1412696939}
+  attackDetectionRang: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  detectionCenter: {fileID: 733115253}
+  detectionRange: 12
+  whatisEnemy:
+    serializedVersion: 2
+    m_Bits: 256
+  whatisObs:
+    serializedVersion: 2
+    m_Bits: 1024
+  currentTarget: {fileID: 0}
+  animationMoveMult: 1.5
+  skills:
+  - {fileID: 11400000, guid: 168b0e36f7c3db74d84948b7dfc74a7c, type: 2}
+  - {fileID: 11400000, guid: 8030ec5180a3f7344b7dddc0abb845ff, type: 2}
 --- !u!4 &1684092554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 331953638769864057, guid: 0504336c24266b141a524cbebec8e2f2,
