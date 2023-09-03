@@ -19,6 +19,9 @@ namespace UGG.Combat
         //缓存
         private Collider[] detectionedTarget = new Collider[1];
         
+        //允许攻击输入
+        [SerializeField] private bool allowAttackInput;
+        
         //当前目标的引用
         [SerializeField] private Transform currentTarget;
         
@@ -49,14 +52,21 @@ namespace UGG.Combat
         
         private void PlayerAttackAction()
         {
-            if (!CanInputAttack())
+            // if (!CanInputAttack())
+            // {
+            //     return;
+            // }
+            //当玩家处于Motion状态(idle)且不处于过渡状态也允许玩家输入攻击信号
+            if (!allowAttackInput)
             {
-                return;
-            }
-            
-            if (_characterInputSystem.playerLAtk)
-            {
-                _animator.SetTrigger(lAtkID);
+                if (_animator.CheckCurrentTagAnimationTimeIsExceed("Motion", 0.01f) && !_animator.IsInTransition(0))
+                {
+                    SetAllowAttackInput(true);
+                }
+                else
+                {
+                    return;
+                }
             }
             
             //如果玩按下鼠标左键
@@ -64,8 +74,9 @@ namespace UGG.Combat
             {
                 //触发默认攻击动画
                 _animator.SetTrigger(lAtkID);
+                SetAllowAttackInput(false); //攻击后禁用输入直到允许输入时间到
             }
-            
+
             //如果玩家一直按住鼠标右键
             if (_characterInputSystem.playerRAtk)
             {
@@ -74,6 +85,7 @@ namespace UGG.Combat
                 {
                     //触发大剑攻击动画
                     _animator.SetTrigger(lAtkID);
+                    SetAllowAttackInput(false);
                 }
             }
             
@@ -151,6 +163,18 @@ namespace UGG.Combat
                 }
             }
         }
+        
+        /// <summary>
+        /// 获取当前是否允许玩家攻击输入
+        /// </summary>
+        /// <returns></returns>
+        public bool GetAllowAttackInput() => allowAttackInput;
+
+        /// <summary>
+        /// 设置是否允许玩家输入攻击信号 
+        /// </summary>
+        /// <param name="allow"></param>
+        public void SetAllowAttackInput(bool allow) => allowAttackInput = allow;
         
         #endregion
     }

@@ -89,6 +89,7 @@ public class AICombatSystem : CharacterCombatSystemBase
     
     private void UpdateAnimationMove()
     {
+        //翻滚和攻击期间允许角色位移
         if (_animator.CheckAnimationTag("Roll") || _animator.CheckAnimationTag("Attack"))
         {
             _characterMovementBase.CharacterMoveInterface(transform.root.forward, _animator.GetFloat(animationMoveID) * animationMoveMult, true);

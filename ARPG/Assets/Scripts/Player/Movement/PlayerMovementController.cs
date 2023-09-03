@@ -67,7 +67,7 @@ namespace UGG.Move
             base.Update();
             
             PlayerMoveDirection();
-            UpdateRollAnimation();
+            //UpdateRollAnimation();
 
         }
 
@@ -191,27 +191,29 @@ namespace UGG.Move
         
         private void CharacterCrouchControl()
         {
-            if(!CanCrouch()) return;
+            //如果角色不能下蹲 则返回
+            if (!CanCrouch()) return;
 
+            //如果角色按下蹲键
             if (_inputSystem.playerCrouch)
             {
-                
+                //判断现在是否处于下蹲状态
                 if (isOnCrouch)
                 {
+                    //检测头顶是否有障碍物 取反
                     if (!DetectionHeadHasObject())
                     {
                         isOnCrouch = false;
-                        characterAnimator.SetFloat(crouchID,0f);
-                        SetCrouchColliderHeight(originHeight,originCenter);
+                        characterAnimator.SetFloat(crouchID, 0f);
+                        SetCrouchColliderHeight(originHeight, originCenter);
                         _tpCameraController.SetLookPlayerTarget(standCameraLook);
                     }
-                    
                 }
                 else
                 {
                     isOnCrouch = true;
-                    characterAnimator.SetFloat(crouchID,1f);
-                    SetCrouchColliderHeight(crouchHeight,crouchCenter);
+                    characterAnimator.SetFloat(crouchID, 1f);
+                    SetCrouchColliderHeight(crouchHeight, crouchCenter);
                     _tpCameraController.SetLookPlayerTarget(crouchCameraLook);
                 }
             }
@@ -225,7 +227,10 @@ namespace UGG.Move
             
         }
         
-        
+        /// <summary>
+        /// 检测头顶是否有障碍物
+        /// </summary>
+        /// <returns></returns>
         private bool DetectionHeadHasObject()
         {
             Collider[] hasObjects = new Collider[1];
