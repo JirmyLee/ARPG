@@ -63,6 +63,7 @@
      <Compile Include="Assets\StateMachine\Scripts\Condition\ToConbatCondition.cs" />
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\Base\CharacterStateBaseSO.cs" />
      <Compile Include="Assets\Scripts\Interface\IDamagar.cs" />
+     <Compile Include="Assets\Scripts\AnimationSMB\ActivateAttackInput.cs" />
      <Compile Include="Assets\Scripts\StateMachine\MainStateMachineController.cs" />
      <Compile Include="Assets\GameAssets\TwinSword_Expansion_V2\Script\WeaponMasterUI.cs" />
      <Compile Include="Assets\Scripts\Player\Camera\TP_CameraController.cs" />
@@ -81,7 +82,6 @@
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AISleep.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
-     <Compile Include="Assets\Scripts\AnimationSMB\ActivateAttackInput.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />
