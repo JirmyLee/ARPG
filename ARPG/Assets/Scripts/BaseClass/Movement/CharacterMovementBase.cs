@@ -35,6 +35,7 @@ namespace UGG.Move
         
         //Animation Paramters
         protected int animationMoveID = Animator.StringToHash("AnimationMove");
+        protected int animationJumpID = Animator.StringToHash("AnimationJump");
         protected int movementID = Animator.StringToHash("Movement");
         protected int horizontalID = Animator.StringToHash("Horizontal");
         protected int verticalID = Animator.StringToHash("Vertical");
@@ -142,6 +143,10 @@ namespace UGG.Move
         {
             return Physics.Raycast(transform.position + transform.up * .5f, dir.normalized * characterAnimator.GetFloat(animationMoveID), out var hit, 1f,whatIsObs);
         }
+        protected bool CanAnimationJump(Vector3 dir)
+        {
+            return Physics.Raycast(transform.position + transform.up * .5f, dir.normalized * characterAnimator.GetFloat(animationJumpID), out var hit, 1f,whatIsObs);
+        }
         
         #endregion
 
@@ -169,6 +174,25 @@ namespace UGG.Move
                     verticalDirection = Vector3.zero;
                 }
         
+                control.Move((moveSpeed * Time.deltaTime)
+                    * movementDirection.normalized + Time.deltaTime
+                    * verticalDirection);
+            }
+        }
+        
+        /// <summary>
+        /// 跳跃接口
+        /// </summary>
+        /// <param name="moveDirection">移动方向</param>
+        /// <param name="moveSpeed">移动速度</param>
+        public virtual void CharacterJumpInterface(Vector3 moveDirection, float moveSpeed,bool useGravity)
+        {
+            if (!CanAnimationJump(moveDirection))
+            {
+                movementDirection = moveDirection.normalized;
+                
+                verticalDirection.Set(0.0f, moveSpeed, 0.0f);
+
                 control.Move((moveSpeed * Time.deltaTime)
                     * movementDirection.normalized + Time.deltaTime
                     * verticalDirection);

@@ -18,7 +18,8 @@ namespace UGG.Health
         protected Transform currentAttacker;
         
         //AnimationID
-        protected int animationMove = Animator.StringToHash("AnimationMove");
+        protected int animationMoveID = Animator.StringToHash("AnimationMove");
+        protected int animationJumpID = Animator.StringToHash("AnimationJump");
         
         //HitAnimationMoveSpeedMult
         public float hitAnimationMoveMult;
@@ -51,8 +52,12 @@ namespace UGG.Health
 
         protected virtual void HitAnimaitonMove()
         {
-            if(!_animator.CheckAnimationTag("Hit")) return;
-            _movement.CharacterMoveInterface(transform.forward,_animator.GetFloat(animationMove) * hitAnimationMoveMult,true);
+            if(!_animator.CheckAnimationTag("Hit")) 
+                return;
+            _movement.CharacterMoveInterface(transform.forward,_animator.GetFloat(animationMoveID) * hitAnimationMoveMult,true);
+            _movement.CharacterJumpInterface(transform.up,_animator.GetFloat(animationJumpID) * hitAnimationMoveMult,true);
+            
+            Debug.LogFormat("run here jump vaule {0}",_animator.GetFloat(animationJumpID));
         }
 
         #region 接口

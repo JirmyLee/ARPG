@@ -109,6 +109,7 @@ namespace UGG.Combat
             if (_animator.CheckAnimationTag("Attack") || _animator.CheckAnimationTag("GSAttack"))
             {
                 _characterMovementBase.CharacterMoveInterface(transform.forward,_animator.GetFloat(animationMoveID) * attackMoveMult,true);
+                //_characterMovementBase.CharacterMoveInterface(transform.up,_animator.GetFloat(animationJumpID) * attackMoveMult,true);
             }
         }
 

@@ -93,6 +93,7 @@ public class AICombatSystem : CharacterCombatSystemBase
         if (_animator.CheckAnimationTag("Roll") || _animator.CheckAnimationTag("Attack"))
         {
             _characterMovementBase.CharacterMoveInterface(transform.root.forward, _animator.GetFloat(animationMoveID) * animationMoveMult, true);
+            //_characterMovementBase.CharacterMoveInterface(transform.root.up, _animator.GetFloat(animationJumpID) * animationMoveMult, true);
         }
     }
     

@@ -17,6 +17,7 @@ public abstract class StateActionSO : ScriptableObject
     
     //animationID
     protected int animationMoveID = Animator.StringToHash("AnimationMove");
+    protected int animationJumpID = Animator.StringToHash("AnimationJump");
     protected int movementID = Animator.StringToHash("Movement");
     protected int horizontalID = Animator.StringToHash("Horizontal");
     protected int verticalID = Animator.StringToHash("Vertical");
