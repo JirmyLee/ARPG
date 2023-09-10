@@ -22,7 +22,7 @@ namespace UGG.Health
 
             if (CanParry())
             {
-                Parry(hitAnimationName);
+                Parry(hitAnimationName);    //格挡
             }
             else
             {
@@ -30,37 +30,38 @@ namespace UGG.Health
                 GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
             }
         }
-
-        #region Parry
+        
+        #region Parry         //格挡
 
         private bool CanParry()
         {
-            if (_animator.CheckAnimationTag("Parry")) return true;
-            if (_animator.CheckAnimationTag("ParryHit")) return true;
-
+            //出于格挡或者格挡成功时允许格挡
+            if (_animator.CheckAnimationTag("Parry") || _animator.CheckAnimationTag("ParryHit"))
+            {
+                return true;
+            }
             return false;
         }
 
+        //根据攻击方向播放格挡动画
         private void Parry(string hitName)
         {
-            if (!CanParry()) return;
+            if (!CanParry()) 
+                return;
 
             switch (hitName)
             {
-                default:
-                    _animator.Play(hitName, 0, 0f);
-                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
-                    break;
+                //这里是根据AI攻击传的攻击方向进行枚举，实际应该每种受击方向都加进去
                 case "Hit_D_Up":
-                    //_animator.Play("ParryF", 0, 0f);
-                    //GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    _animator.Play("Parry_F", 0, 0f);    //播放对应的格挡动画
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
 
-                    if(currentAttacker.TryGetComponent(out CharacterHealthSystemBase health))
-                    {
-                        //health.FlickWeapon("Flick_0");
-                        //GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
-                    }
-
+                    // if(currentAttacker.TryGetComponent(out CharacterHealthSystemBase health))
+                    // {
+                    //     health.FlickWeapon("Flick_0");
+                    //     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    // }
+                    
                     canExecute = true;
 
                     //游戏时间缓慢 给玩家处决反应时间
@@ -76,8 +77,36 @@ namespace UGG.Health
                     }, false);
                     break;
                 case "Hit_H_Right":
-                    //_animator.Play("ParryL", 0, 0f);
-                    //GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    _animator.Play("Parry_R", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                case "Hit_H_Left":
+                    _animator.Play("Parry_L", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                case "Hit_D_Right":
+                    _animator.Play("Parry_D_R", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                case "Hit_D_Left":
+                    _animator.Play("Parry_D_L", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                case "Hit_Up_Right":
+                    _animator.Play("Parry_R", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                case "Hit_Up_Left":
+                    _animator.Play("Parry_L", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                case "Hit_Front":
+                    _animator.Play("Parry_Broken", 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    break;
+                default:
+                    _animator.Play(hitName, 0, 0f);
+                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
                     break;
             }
         }
@@ -91,10 +120,11 @@ namespace UGG.Health
             return true;
         }
 
+        //被攻击时面向攻击者
         private void OnHitLockTarget()
         {
-            //检测当前动画是否处于受伤状态
-            if (_animator.CheckAnimationTag("Hit") || _animator.CheckAnimationTag("ParryHit"))
+            //检测当前动画是否处于受击和格挡状态
+            if ((_animator.CheckAnimationTag("Hit") && (!_animator.CheckAnimationName("Hit_Executed_1"))) || _animator.CheckAnimationTag("ParryHit"))
             {
                 transform.rotation = transform.LockOnTarget(currentAttacker, transform, 50f);
             }

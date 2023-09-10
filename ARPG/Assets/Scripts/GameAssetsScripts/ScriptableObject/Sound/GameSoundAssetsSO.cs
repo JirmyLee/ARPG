@@ -3,6 +3,7 @@ using UnityEngine;
 
 public enum SoundAssetsType
 {
+    parry,
     hit,
     swordWave,
     GSwordWave
@@ -38,6 +39,8 @@ public class GameSoundAssetsSO : ScriptableObject
                 return assetsDictionary["SwordWave"][Random.Range(0, assetsDictionary["SwordWave"].Length)];
             case SoundAssetsType.GSwordWave:
                 return assetsDictionary["GSwordWave"][Random.Range(0, assetsDictionary["GSwordWave"].Length)];
+            case SoundAssetsType.parry:
+                return assetsDictionary["Parry"][Random.Range(0, assetsDictionary["Parry"].Length)];
             default:
                 Debug.Log("没找到");
                 return null;

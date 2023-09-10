@@ -31,6 +31,7 @@ namespace UGG.Combat
             DetectionTarget();
             ActionMotion();
             UpdateCurrentTarget();
+            PlayerParryAction();
         }
 
         private void LateUpdate()
@@ -50,6 +51,19 @@ namespace UGG.Combat
             return false;
         }
         
+        //是否允许格挡输入
+        private bool CanInputParry()
+        {
+            //玩家移动、格挡和受伤超过0.2秒后允许格挡输入
+            if (_animator.CheckAnimationTag("Motion") || _animator.CheckAnimationTag("Parry") || _animator.CheckCurrentTagAnimationTimeIsExceed("Hit",0.20f))
+            {
+                return true;
+            }
+            
+            return false;
+        }
+        
+        //玩家攻击事件
         private void PlayerAttackAction()
         {
             // if (!CanInputAttack())
@@ -92,6 +106,19 @@ namespace UGG.Combat
             _animator.SetBool(sWeaponID,_characterInputSystem.playerRAtk);
         }
 
+        //玩家格挡操作
+        private void PlayerParryAction()
+        {
+            if (CanInputParry())
+            {
+                _animator.SetBool(parryID,_characterInputSystem.playerDefen);
+                return;
+            }
+            
+            _animator.SetBool(parryID,false);
+            return;
+        }
+        
         //攻击动作自动锁定目标
         private void OnAttackActionAutoLock()
         {
@@ -101,6 +128,10 @@ namespace UGG.Combat
                 {
                     transform.root.rotation = transform.LockOnTarget(currentTarget, transform.root,50f);    //旋转当前角色的root子节点，LockOnTarget为拓展方法
                 }
+            }
+            else if(_animator.CheckAnimationTag("Parry"))
+            {
+                transform.root.rotation = transform.LockOnTarget(currentTarget, transform.root,500f);    //旋转当前角色的root子节点，LockOnTarget为拓展方法
             }
         }
 

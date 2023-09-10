@@ -17,7 +17,7 @@ namespace UGG.Combat
         //aniamtionID
         protected int lAtkID = Animator.StringToHash("LAtk");
         protected int rAtkID = Animator.StringToHash("RAtk");
-        protected int defenID = Animator.StringToHash("Defen");
+        protected int parryID = Animator.StringToHash("Parry");
         protected int animationMoveID = Animator.StringToHash("AnimationMove");
         protected int animationJumpID = Animator.StringToHash("AnimationJump");
         protected int sWeaponID = Animator.StringToHash("SWeapon");

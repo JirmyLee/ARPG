@@ -730,8 +730,8 @@ ModelImporter:
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.687389
-            value: -2
+            time: 0.45466995
+            value: -1
             inSlope: 0
             outSlope: 0
             tangentMode: 0
@@ -741,54 +741,11 @@ ModelImporter:
           - serializedVersion: 3
             time: 0.7575506
             value: 0.0000034514815
-            inSlope: Infinity
-            outSlope: 0
-            tangentMode: 7
-            weightedMode: 1
-            inWeight: 0.33333334
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          preInfinity: 3
-          postInfinity: 3
-          rotationOrder: 4
-      - name: AnimationJump
-        curve:
-          serializedVersion: 2
-          curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 0.23731902
-            value: 4.008217
-            inSlope: Infinity
-            outSlope: 0
-            tangentMode: 7
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 0.6887549
-            value: 0
-            inSlope: -8.878818
+            inSlope: 3.301642
             outSlope: 0
             tangentMode: 5
-            weightedMode: 0
-            inWeight: 0
+            weightedMode: 1
+            inWeight: 0.33333334
             outWeight: 0
           - serializedVersion: 3
             time: 1

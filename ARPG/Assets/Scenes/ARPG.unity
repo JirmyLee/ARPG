@@ -1752,6 +1752,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8386252596634496633, guid: 4c062b4470539b4499fb986e4adec7b3,
+        type: 3}
+      propertyPath: maxHitCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386252596634496633, guid: 4c062b4470539b4499fb986e4adec7b3,
+        type: 3}
+      propertyPath: maxParryCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8386252596634496634, guid: 4c062b4470539b4499fb986e4adec7b3,
         type: 3}
       propertyPath: m_Enabled
