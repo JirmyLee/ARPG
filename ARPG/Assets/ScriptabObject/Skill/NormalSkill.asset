@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Attack_Combat_1
   skillID: 1
-  skillCDTime: 10
-  skillUseDistance: 1.75
+  skillCDTime: 8
+  skillUseDistance: 2
   skillCanCast: 0

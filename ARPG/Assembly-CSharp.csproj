@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
      <Compile Include="Assets\StateMachine\Scripts\State\AISleep.cs" />
      <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
+     <Compile Include="Assets\Scripts\AIChangeCombo.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scripts\StateMachine\ScriptableObject" />
      <Folder Include="Assets\Scripts\AnimationSMB" />

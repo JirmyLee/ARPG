@@ -8,7 +8,7 @@ public class AICombat : StateActionSO
 {
     private int randomHorizontal;
 
-    private float maxCombatDirection = 1.5f;
+    //private float maxCombatDirection = 1.5f;
 
     //AI战斗状态，各自战斗相关的逻辑会在这个状态来处理
     [SerializeField] private CombatSkillBase currentSkill;
