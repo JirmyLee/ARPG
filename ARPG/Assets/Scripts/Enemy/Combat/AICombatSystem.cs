@@ -146,7 +146,8 @@ public class AICombatSystem : CharacterCombatSystemBase
     {
         for (int i = 0; i < skills.Count; i++)
         {
-            if (skills[i].GetSkillCanCast()) return skills[i];
+            if (skills[i].GetSkillCanCast()) 
+                return skills[i];
         }
         
          return null;

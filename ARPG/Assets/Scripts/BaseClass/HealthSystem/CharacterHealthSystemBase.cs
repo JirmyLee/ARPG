@@ -96,6 +96,15 @@ namespace UGG.Health
             _animator.Play(animationName, 0, 0f);
         }
 
+        /// <summary>
+        /// 判断是否是当前正在播放的动画标签
+        /// </summary>
+        /// <returns></returns>
+        public bool GetAnimation(string animationTag)
+        {
+            return _animator.CheckAnimationTag(animationTag);
+        }
+
         #endregion
         
         

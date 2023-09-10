@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84aad75110a6a54bb3e1f0e5ff0c6ea, type: 3}
-  m_Name: NormalSkill
+  m_Name: Skill2
   m_EditorClassIdentifier: 
-  skillName: Attack_Combat_1
-  skillID: 1
-  skillCDTime: 8
-  skillUseDistance: 2
+  skillName: SPSkill_2
+  skillID: 2
+  skillCDTime: 18
+  skillUseDistance: 5
   skillCanCast: 0

@@ -22,7 +22,7 @@ namespace UGG.Health
         {
             SetAttacker(attacker);  //设置攻击者
             
-            if (maxParryCount > 0 && !OnInvincibleState())
+            if (maxParryCount > 0 && !OnInvincibleState() && CanParry())
             {
                 //如果反击格挡次数等于2
                 if (counterattackParryCount >= 3)
@@ -105,11 +105,11 @@ namespace UGG.Health
                 case "Hit_D_Up":
                     //_animator.Play("ParryF", 0, 0f);
                     //GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
-                    _animator.Play("Avoid_R", 0, 0f);
+                    _animator.Play("Avoid_Up", 0, 0f);
                     counterattackParryCount++;  //增加格挡反击计数
                     break;
                 case "Hit_D_Right":
-                    _animator.Play("Avoid_L", 0, 0f);
+                    _animator.Play("Avoid_R", 0, 0f);
                     counterattackParryCount++;
                     break;
                 case "Hit_H_Left":
@@ -123,7 +123,7 @@ namespace UGG.Health
                     counterattackParryCount++;
                     break;
                 case "Hit_Up_Left":
-                    _animator.Play("Avoid_Up", 0, 0f);
+                    _animator.Play("Avoid_L", 0, 0f);
                     //GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     counterattackParryCount++;
                     break;
@@ -133,6 +133,17 @@ namespace UGG.Health
                     counterattackParryCount++;
                     break;
             }
+        }
+
+        //是否可以格挡（无法格挡大剑）
+        private bool CanParry()
+        {
+            if (currentAttacker.TryGetComponent(out CharacterHealthSystemBase health))
+            {
+                return !health.GetAnimation("GSAttack");
+            }
+
+            return true;
         }
     }
 }

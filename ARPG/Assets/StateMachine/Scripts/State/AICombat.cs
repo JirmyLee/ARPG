@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //战斗状态
@@ -33,6 +34,8 @@ public class AICombat : StateActionSO
         }
         else
         {
+            //释放技能前先面向目标
+            LockOnTarget();
             currentSkill.InvokeSkill();
 
             if (!currentSkill.GetSkillCanCast())
@@ -56,7 +59,7 @@ public class AICombat : StateActionSO
         //如果动画处于Motion状态
         if (animator.CheckAnimationTag("Motion"))
         {
-            if (combatSystem.GetCurrentTargetDistance() < 1.75f + 0.1f)
+            if (combatSystem.GetCurrentTargetDistance() < 2.5f + 0.1f)
             {
                 movement.CharacterMoveInterface(-combatSystem.GetDirectionForTarget(), 1.4f, true);
 
@@ -65,9 +68,9 @@ public class AICombat : StateActionSO
 
                 randomHorizontal = GetRandomHorizontal();
 
-                if (combatSystem.GetCurrentTargetDistance() < 1f + 0.05f)  //和玩家距离小于一定范围
+                if (combatSystem.GetCurrentTargetDistance() < 2f)  //和玩家距离小于一定范围，发起普攻
                 {
-                    if (!animator.CheckAnimationTag("Hit") || !animator.CheckAnimationTag("Defen"))
+                    if (!animator.CheckAnimationTag("Hit") || !animator.CheckAnimationTag("ParryHit"))
                     {
                         animator.Play("Attack_Combat_1", 0, 0f);
 
@@ -75,8 +78,9 @@ public class AICombat : StateActionSO
                     }
                 }
             }
-            else if (combatSystem.GetCurrentTargetDistance() > 1.75f + 0.1f && combatSystem.GetCurrentTargetDistance() < 6.1 + 0.5f)
+            else if (combatSystem.GetCurrentTargetDistance() > 2.5f + 0.1f && combatSystem.GetCurrentTargetDistance() < 6.1 + 0.5f)
             {
+                //和玩家距离在一定范围，绕圈走
                 if (HorizontalDirectionHasObject(randomHorizontal))
                 {
                     switch (randomHorizontal)
@@ -113,6 +117,15 @@ public class AICombat : StateActionSO
         }
     }
 
+    private void LockOnTarget()
+    {
+        Transform target = combatSystem.GetCurrentTarget();
+        if (target == null)
+        {
+            return;
+        }
+        movement.transform.root.rotation = movement.transform.LockOnTarget(target, movement.transform.root.transform, 50f);
+    }
     private bool HorizontalDirectionHasObject(int direction)
     {
         return Physics.Raycast(movement.transform.position, movement.transform.right * direction, 1.5f, 1 << 8);

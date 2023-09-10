@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skill1
   m_EditorClassIdentifier: 
   skillName: SPSkill_1
-  skillID: 2
-  skillCDTime: 10
+  skillID: 1
+  skillCDTime: 13
   skillUseDistance: 7
   skillCanCast: 0

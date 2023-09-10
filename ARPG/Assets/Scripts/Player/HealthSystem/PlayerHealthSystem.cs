@@ -65,7 +65,7 @@ namespace UGG.Health
                     canExecute = true;
 
                     //游戏时间缓慢 给玩家处决反应时间
-                    Time.timeScale = 0.25f;
+                    Time.timeScale = 0.2f;
                     //创建定时器，在时间结束之后恢复时间缩放
                     GameObjectPoolSystem.Instance.TakeGameObject("Timer").GetComponent<Timer>().CreateTime(0.25f, () =>
                     {

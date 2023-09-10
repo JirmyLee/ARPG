@@ -874,8 +874,8 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   animationMoveMult: 1.5
   skills:
-  - {fileID: 11400000, guid: 168b0e36f7c3db74d84948b7dfc74a7c, type: 2}
   - {fileID: 11400000, guid: 8030ec5180a3f7344b7dddc0abb845ff, type: 2}
+  - {fileID: 11400000, guid: fde6cdc3e4950ad49b1bd3d1a6f51eb9, type: 2}
 --- !u!4 &1480859245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8386252596071195186, guid: 4c062b4470539b4499fb986e4adec7b3,
