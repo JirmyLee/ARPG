@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UGG.Health;
 using UnityEngine;
 
 namespace UGG.Combat
@@ -24,6 +25,15 @@ namespace UGG.Combat
         
         //当前目标的引用
         [SerializeField] private Transform currentTarget;
+
+        private PlayerHealthSystem healthSystem;
+        
+        protected override void Awake()
+        {
+            base.Awake();
+
+            healthSystem = GetComponentInParent<PlayerHealthSystem>();
+        }
         
         private void Update()
         {
@@ -86,9 +96,19 @@ namespace UGG.Combat
             //如果玩按下鼠标左键
             if (_characterInputSystem.playerLAtk)
             {
-                //触发默认攻击动画
-                _animator.SetTrigger(lAtkID);
-                SetAllowAttackInput(false); //攻击后禁用输入直到允许输入时间到
+                if (healthSystem.GetCanExecute())
+                {
+                    //播放处决动画
+                    _animator.Play("Execute_0", 0, 0f);
+
+                    Time.timeScale = 1f;
+                }
+                else
+                {
+                    //触发默认攻击动画
+                    _animator.SetTrigger(lAtkID);
+                    SetAllowAttackInput(false); //攻击后禁用输入直到允许输入时间到
+                }
             }
 
             //如果玩家一直按住鼠标右键

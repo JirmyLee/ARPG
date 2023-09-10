@@ -25,7 +25,7 @@ namespace UGG.Health
             if (maxParryCount > 0 && !OnInvincibleState())
             {
                 //如果反击格挡次数等于2
-                if (counterattackParryCount >= 2)
+                if (counterattackParryCount >= 3)
                 {
                     //触发格挡反击技能
                     _animator.Play("CounterAttack", 0, 0f);
@@ -76,11 +76,11 @@ namespace UGG.Health
         }
         
         /// <summary>
-        /// 处于处决状态无敌不受到伤害（可以再加个霸体特效）
+        /// 处于翻滚、处决、或跳跃攻击状态无敌不受到伤害（可以再加个霸体特效）
         /// </summary>
         private bool OnInvincibleState()
         {
-            if (_animator.CheckAnimationTag("CounterAttack")) 
+            if (_animator.CheckAnimationTag("Roll") || _animator.CheckAnimationTag("CounterAttack") || _animator.CheckAnimationName("Attack_Sliding")) 
                 return true;
 
             return false;

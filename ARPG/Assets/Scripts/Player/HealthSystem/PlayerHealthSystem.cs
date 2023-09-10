@@ -53,19 +53,20 @@ namespace UGG.Health
             {
                 //这里是根据AI攻击传的攻击方向进行枚举，实际应该每种受击方向都加进去
                 case "Hit_D_Up":
-                    _animator.Play("Parry_F", 0, 0f);    //播放对应的格挡动画
-                    GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    // _animator.Play("Parry_F", 0, 0f);    //播放对应的格挡动画
+                    // GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
 
-                    // if(currentAttacker.TryGetComponent(out CharacterHealthSystemBase health))
-                    // {
-                    //     health.FlickWeapon("Flick_0");
-                    //     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
-                    // }
+                    if(currentAttacker.TryGetComponent(out CharacterHealthSystemBase health))
+                    {
+                        health.PlayAnimation("Flick_0");  //获取目标身上的脚本组件并播放弹刀动画
+                        GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
+                    }
                     
                     canExecute = true;
 
                     //游戏时间缓慢 给玩家处决反应时间
                     Time.timeScale = 0.25f;
+                    //创建定时器，在时间结束之后恢复时间缩放
                     GameObjectPoolSystem.Instance.TakeGameObject("Timer").GetComponent<Timer>().CreateTime(0.25f, () =>
                     {
                         canExecute = false;
@@ -132,6 +133,7 @@ namespace UGG.Health
 
         #endregion
 
+        //外部接口，返回处决状态
         public bool GetCanExecute() => canExecute;
     }
 }

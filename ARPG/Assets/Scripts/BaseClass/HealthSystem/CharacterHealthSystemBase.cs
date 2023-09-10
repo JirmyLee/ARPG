@@ -55,9 +55,7 @@ namespace UGG.Health
             if(!_animator.CheckAnimationTag("Hit")) 
                 return;
             _movement.CharacterMoveInterface(transform.forward,_animator.GetFloat(animationMoveID) * hitAnimationMoveMult,true);
-            _movement.CharacterJumpInterface(transform.up,_animator.GetFloat(animationJumpID) * hitAnimationMoveMult,true);
-            
-            Debug.LogFormat("run here jump vaule {0}",_animator.GetFloat(animationJumpID));
+            //_movement.CharacterJumpInterface(transform.up,_animator.GetFloat(animationJumpID) * hitAnimationMoveMult,true);
         }
 
         #region 接口
@@ -87,6 +85,18 @@ namespace UGG.Health
         #endregion
         
         
+        #region 外部接口
+
+        /// <summary>
+        /// 播放动画
+        /// </summary>
+        /// <param name="animationName"></param>
+        public void PlayAnimation(string animationName)
+        {
+            _animator.Play(animationName, 0, 0f);
+        }
+
+        #endregion
         
         
     }
