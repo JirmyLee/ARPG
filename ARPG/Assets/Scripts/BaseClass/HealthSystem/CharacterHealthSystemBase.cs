@@ -23,6 +23,10 @@ namespace UGG.Health
         
         //HitAnimationMoveSpeedMult
         public float hitAnimationMoveMult;
+        
+        //特效位置
+        public Transform ParryPos;
+        public Transform HitPos;
 
 
         protected virtual void Awake()

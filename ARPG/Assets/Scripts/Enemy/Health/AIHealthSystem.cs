@@ -30,6 +30,7 @@ namespace UGG.Health
                     //触发格挡反击技能
                     _animator.Play("CounterAttack", 0, 0f);
                     counterattackParryCount = 0;
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                 }
                 else
@@ -40,7 +41,7 @@ namespace UGG.Health
             }
             else
             {
-                if (hitCount >= maxHitCount && !_animator.CheckAnimationTag("Flick_0"))
+                if (hitCount >= maxHitCount && !_animator.CheckAnimationName("Flick_0"))
                 {
                     //受击达到最大次数，触发脱身技能,随机3种后撤方法
                     int rollType = Random.Range(0, 3);
@@ -67,6 +68,7 @@ namespace UGG.Health
                     if (!OnInvincibleState())
                     {
                         _animator.Play(hitAnimationName, 0, 0f);  //播放对应的受击动画
+                        FXManager.Instance.PlayEffect("Effect_PenXue_1", HitPos);
                         GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
                         //transform.rotation = transform.LockOnTarget(attacker, transform, 50f);
                         hitCount++;
@@ -100,6 +102,7 @@ namespace UGG.Health
             {
                 default:
                     _animator.Play(hitName, 0, 0f);
+                    FXManager.Instance.PlayEffect("Effect_PenXue_1", HitPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
                     break;
                 case "Hit_D_Up":
@@ -114,11 +117,13 @@ namespace UGG.Health
                     break;
                 case "Hit_H_Left":
                     _animator.Play("Parry_L", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     counterattackParryCount++;
                     break;
                 case "Hit_H_Right":
                     _animator.Play("Parry_R", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     counterattackParryCount++;
                     break;
@@ -129,6 +134,7 @@ namespace UGG.Health
                     break;
                 case "Hit_Up_Right":
                     _animator.Play("Parry_F", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     counterattackParryCount++;
                     break;

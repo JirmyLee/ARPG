@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace UGG.Health
@@ -27,6 +28,7 @@ namespace UGG.Health
             else
             {
                 _animator.Play(hitAnimationName, 0, 0f);
+                FXManager.Instance.PlayEffect("Effect_PenXue_2", HitPos);
                 GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
             }
         }
@@ -35,7 +37,7 @@ namespace UGG.Health
 
         private bool CanParry()
         {
-            //出于格挡或者格挡成功时允许格挡
+            //处于格挡或者格挡成功时允许格挡
             if (_animator.CheckAnimationTag("Parry") || _animator.CheckAnimationTag("ParryHit"))
             {
                 return true;
@@ -61,7 +63,7 @@ namespace UGG.Health
                         health.PlayAnimation("Flick_0");  //获取目标身上的脚本组件并播放弹刀动画
                         GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     }
-                    
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     canExecute = true;
 
                     //游戏时间缓慢 给玩家处决反应时间
@@ -79,39 +81,47 @@ namespace UGG.Health
                     break;
                 case "Hit_H_Right":
                     _animator.Play("Parry_R", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 case "Hit_H_Left":
                     _animator.Play("Parry_L", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 case "Hit_D_Right":
                     _animator.Play("Parry_D_R", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 case "Hit_D_Left":
                     _animator.Play("Parry_D_L", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 case "Hit_Up_Right":
                     _animator.Play("Parry_R", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 case "Hit_Up_Left":
                     _animator.Play("Parry_L", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 case "Hit_Front":
                     _animator.Play("Parry_Broken", 0, 0f);
+                    FXManager.Instance.PlayEffect("ParryEffect",ParryPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.parry);
                     break;
                 default:
                     _animator.Play(hitName, 0, 0f);
+                    FXManager.Instance.PlayEffect("Effect_PenXue_1", HitPos);
                     GameAssets.Instance.PlaySoundEffect(_audioSource, SoundAssetsType.hit);
                     break;
             }
         }
-
+    
         #endregion
 
         #region Hit
