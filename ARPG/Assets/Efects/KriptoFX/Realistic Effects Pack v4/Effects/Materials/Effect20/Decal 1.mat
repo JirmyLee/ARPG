@@ -136,5 +136,5 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Speed: {r: 2, g: 2, b: 0, a: 1}
     - _Tiling: {r: 800, g: 800, b: 8, a: 8}
-    - _TintColor: {r: 2.5, g: 2.8620677, b: 10, a: 1}
+    - _TintColor: {r: 2.5130882, g: 4.4119496, b: 9.999999, a: 1}
   m_BuildTextureStacks: []
